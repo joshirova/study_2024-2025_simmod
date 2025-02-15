@@ -1,46 +1,72 @@
 ---
 ## Front matter
-lang: ru-RU
-title: Лабораторная работа №1
-subtitle: Простые модели компьютерной сети
-author:
-  - Оширова Ю. Н.
-institute:
-  - Российский университет дружбы народов, Москва, Россия
-date: 16 февраля 2025
+title: "Лабораторная работа №1"
+subtitle: "Простые модели компьютерной сети"
+author: "Оширова Юлия Николаевна"
 
-## i18n babel
+## Generic otions
+lang: ru-RU
+toc-title: "Содержание"
+
+## Bibliography
+bibliography: bib/cite.bib
+csl: pandoc/csl/gost-r-7-0-5-2008-numeric.csl
+
+## Pdf output format
+toc: true # Table of contents
+toc-depth: 2
+lof: true # List of figures
+lot: true # List of tables
+fontsize: 12pt
+linestretch: 1.5
+papersize: a4
+documentclass: scrreprt
+## I18n polyglossia
+polyglossia-lang:
+  name: russian
+  options:
+	- spelling=modern
+	- babelshorthands=true
+polyglossia-otherlangs:
+  name: english
+## I18n babel
 babel-lang: russian
 babel-otherlangs: english
-
-## Formatting pdf
-toc: false
-toc-title: Содержание
-slide_level: 2
-aspectratio: 169
-section-titles: true
-theme: metropolis
+## Fonts
+mainfont: IBM Plex Serif
+romanfont: IBM Plex Serif
+sansfont: IBM Plex Sans
+monofont: IBM Plex Mono
+mathfont: STIX Two Math
+mainfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+romanfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+sansfontoptions: Ligatures=Common,Ligatures=TeX,Scale=MatchLowercase,Scale=0.94
+monofontoptions: Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9
+mathfontoptions:
+## Biblatex
+biblatex: true
+biblio-style: "gost-numeric"
+biblatexoptions:
+  - parentracker=true
+  - backend=biber
+  - hyperref=auto
+  - language=auto
+  - autolang=other*
+  - citestyle=gost-numeric
+## Pandoc-crossref LaTeX customization
+figureTitle: "Рис."
+tableTitle: "Таблица"
+listingTitle: "Листинг"
+lofTitle: "Список иллюстраций"
+lotTitle: "Список таблиц"
+lolTitle: "Листинги"
+## Misc options
+indent: true
 header-includes:
- - \metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
+  - \usepackage{indentfirst}
+  - \usepackage{float} # keep figures where there are in the text
+  - \floatplacement{figure}{H} # keep figures where there are in the text
 ---
-
-# Информация
-
-## Докладчик
-
-:::::::::::::: {.columns align=center}
-::: {.column width="70%"}
-
-  * Оширова Юлия Николаевна
-  * студентка группы НФИбд-01-22
-  * Российский университет дружбы народов
-
-:::
-::: {.column width="30%"}
-
-
-:::
-::::::::::::::
 
 # Цель работы
 
